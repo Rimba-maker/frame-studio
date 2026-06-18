@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://rimba-maker.github.io',
-  base: '/frame-studio',
+  base: process.env.GITHUB_ACTIONS ? '/frame-studio' : '/',
 
   integrations: [react()],
 
