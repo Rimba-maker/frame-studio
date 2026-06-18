@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/sections/Navbar.astro';
+import Hero from '../components/sections/Hero';
+import Services from '../components/sections/Services';
+import Portfolio from '../components/sections/Portfolio';
+import CaseStudies from '../components/sections/CaseStudies';
+import Studio from '../components/sections/Studio.astro';
+import Process from '../components/sections/Process';
+import Packages from '../components/sections/Packages';
+import Clients from '../components/sections/Clients';
+import Team from '../components/sections/Team';
+import Testimonials from '../components/sections/Testimonials';
+import Contact from '../components/sections/Contact';
+import Footer from '../components/sections/Footer.astro';
+---
+
+<Layout>
+  <Navbar />
+  <Hero client:load />
+  <Services client:visible />
+  <Portfolio client:visible />
+  <CaseStudies client:visible />
+  <Studio />
+  <Process client:visible />
+  <Packages client:visible />
+  <Clients client:visible />
+  <Team client:visible />
+  <Testimonials client:visible />
+  <Contact client:idle />
+  <Footer />
+</Layout>

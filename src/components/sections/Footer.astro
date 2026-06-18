@@ -1,0 +1,174 @@
+---
+const navLinks = [
+  { label: 'Work', href: '#portfolio' },
+  { label: 'Services', href: '#services' },
+  { label: 'Studio', href: '#studio' },
+  { label: 'Process', href: '#process' },
+  { label: 'Packages', href: '#packages' },
+  { label: 'Clients', href: '#clients' },
+  { label: 'Team', href: '#team' },
+  { label: 'Contact', href: '#contact' },
+];
+
+const socials = [
+  { label: 'Instagram', handle: '@framestudio.id', href: '#' },
+  { label: 'Behance', handle: 'framestudio', href: '#' },
+  { label: 'Vimeo', handle: 'framestudio', href: '#' },
+  { label: 'TikTok', handle: '@framestudio.id', href: '#' },
+];
+---
+
+<footer class="bg-[#030303] border-t border-[#27272a]">
+
+  <!-- ── Mobile layout ── -->
+  <div class="lg:hidden max-w-[1600px] mx-auto px-6 pt-12 pb-8">
+
+    <!-- Logo + tagline -->
+    <a href="/" class="inline-flex items-center gap-2.5 mb-5 group">
+      <div class="w-4 h-4 border border-white/60 rotate-45 group-hover:rotate-[135deg] transition-transform duration-500"></div>
+      <span class="text-white text-[15px] font-medium tracking-[-0.02em]">Frame Studio</span>
+    </a>
+    <p class="text-[15px] text-[#767d88] leading-[1.6] italic mb-6">
+      "Visuals that work harder than you do."
+    </p>
+
+    <!-- CTA button -->
+    <a
+      href="#contact"
+      class="inline-flex items-center gap-2 w-full justify-center px-5 py-3 border border-[#27272a] text-white text-[13px] font-medium tracking-[0.02em] uppercase rounded-[4px] hover:bg-white hover:text-black hover:border-white transition-all duration-200 mb-8"
+    >
+      Get Quote
+    </a>
+
+    <!-- Nav + Social side by side -->
+    <div class="grid grid-cols-2 gap-8 mb-8">
+      <div>
+        <p class="text-[10px] uppercase tracking-[0.35em] text-[#404040] mb-4">Navigation</p>
+        <ul class="space-y-2.5">
+          {navLinks.map((link) => (
+            <li>
+              <a href={link.href} class="text-[14px] text-[#767d88] hover:text-white transition-colors duration-200">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <p class="text-[10px] uppercase tracking-[0.35em] text-[#404040] mb-4">Follow Us</p>
+        <ul class="space-y-4">
+          {socials.map((s) => (
+            <li>
+              <a href={s.href} target="_blank" rel="noopener noreferrer" class="group flex flex-col gap-0.5">
+                <span class="text-[10px] uppercase tracking-[0.25em] text-[#404040] group-hover:text-[#767d88] transition-colors duration-200">
+                  {s.label}
+                </span>
+                <span class="text-[13px] text-[#767d88] group-hover:text-white transition-colors duration-200">
+                  {s.handle}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Contact line -->
+    <p class="text-[13px] text-[#404040] leading-[1.7] border-t border-[#27272a] pt-6">
+      Jakarta Selatan · hello@framestudio.id · +62 812 3456 7890
+    </p>
+  </div>
+
+  <!-- ── Desktop layout (unchanged) ── -->
+  <div class="hidden lg:block max-w-[1600px] mx-auto px-10 pt-16 pb-12">
+    <div class="grid grid-cols-[1.5fr_1fr_1fr_1fr] gap-12">
+
+      <!-- Brand column -->
+      <div>
+        <a href="/" class="inline-flex items-center gap-2.5 mb-6 group">
+          <div class="w-4 h-4 border border-white/60 rotate-45 group-hover:rotate-[135deg] transition-transform duration-500"></div>
+          <span class="text-white text-[15px] font-medium tracking-[-0.02em]">Frame Studio</span>
+        </a>
+        <p class="text-[16px] text-[#767d88] leading-[1.6] max-w-[280px] mb-8 italic">
+          "Visuals that work harder than you do."
+        </p>
+        <div class="space-y-1">
+          <p class="text-[11px] uppercase tracking-[0.35em] text-[#404040] mb-2">Studio</p>
+          <p class="text-[14px] text-[#767d88] leading-[1.6]">
+            Jakarta Selatan, Indonesia<br />
+            hello@framestudio.id<br />
+            +62 812 3456 7890
+          </p>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <p class="text-[11px] uppercase tracking-[0.35em] text-[#404040] mb-6">Navigation</p>
+        <ul class="space-y-3">
+          {navLinks.map((link) => (
+            <li>
+              <a href={link.href} class="text-[14px] text-[#767d88] hover:text-white transition-colors duration-200">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div>
+        <p class="text-[11px] uppercase tracking-[0.35em] text-[#404040] mb-6">Follow Us</p>
+        <ul class="space-y-4">
+          {socials.map((s) => (
+            <li>
+              <a href={s.href} target="_blank" rel="noopener noreferrer" class="group flex flex-col gap-0.5">
+                <span class="text-[11px] uppercase tracking-[0.3em] text-[#404040] group-hover:text-[#767d88] transition-colors duration-200">
+                  {s.label}
+                </span>
+                <span class="text-[14px] text-[#767d88] group-hover:text-white transition-colors duration-200">
+                  {s.handle}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Press & CTA -->
+      <div>
+        <p class="text-[11px] uppercase tracking-[0.35em] text-[#404040] mb-6">Press</p>
+        <ul class="space-y-2 mb-10">
+          {['Marketeers', 'MIX Marketing', 'SWA Magazine'].map((p) => (
+            <li class="text-[14px] text-[#767d88]">{p}</li>
+          ))}
+        </ul>
+        <div class="pt-6 border-t border-[#27272a]">
+          <p class="text-[12px] text-[#404040] leading-[1.6] mb-4">
+            Siap mulai project? Konsultasi gratis, tidak ada commitment.
+          </p>
+          <a
+            href="#contact"
+            class="inline-flex items-center gap-2 px-5 py-2.5 border border-[#27272a] text-white text-[13px] font-medium tracking-[0.02em] uppercase rounded-[4px] hover:bg-white hover:text-black hover:border-white transition-all duration-200"
+          >
+            Get Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="border-t border-[#27272a]">
+    <div class="max-w-[1600px] mx-auto px-6 md:px-10 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+      <p class="text-[12px] text-[#404040]">
+        © {new Date().getFullYear()} Frame Studio. All rights reserved.
+      </p>
+      <div class="flex items-center gap-4">
+        <span class="text-[12px] text-[#404040]">Jakarta, Indonesia</span>
+        <span class="text-[12px] text-[#27272a]">·</span>
+        <span class="text-[12px] text-[#404040] italic">Visuals That Sell.</span>
+      </div>
+    </div>
+  </div>
+</footer>

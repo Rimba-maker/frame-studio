@@ -1,0 +1,145 @@
+---
+const specs = [
+  {
+    id: '01',
+    label: 'Location',
+    value: 'Jakarta Selatan',
+    detail: '300 m² studio dengan natural light & blackout zone. On-location tersedia seluruh Indonesia.',
+  },
+  {
+    id: '02',
+    label: 'Lighting',
+    value: 'Profoto B10 Plus',
+    detail: 'Godox AD600 series · Full continuous LED setup untuk foto & video.',
+  },
+  {
+    id: '03',
+    label: 'Camera',
+    value: 'Canon R5 · Sony A1',
+    detail: 'Fujifilm GFX 100 (medium format) untuk keperluan commercial premium.',
+  },
+  {
+    id: '04',
+    label: 'Backdrop',
+    value: '30+ Warna',
+    detail: 'Paper rolls, fabric, wood, marble, dan custom build set sesuai brief.',
+  },
+  {
+    id: '05',
+    label: 'Food Styling',
+    value: 'Full Kitchen',
+    detail: 'Dapur lengkap, fridge, prep area, dan food stylist kit profesional.',
+  },
+  {
+    id: '06',
+    label: 'Fashion',
+    value: 'Full Capability',
+    detail: 'Steamer, makeup station, dan model holding room dengan AC.',
+  },
+];
+---
+
+<section id="studio" class="bg-black py-[78px]">
+  <div class="max-w-[1600px] mx-auto px-6 md:px-10">
+
+    <!-- Header -->
+    <div class="studio-header mb-14" style="opacity:0; transform:translateY(20px);">
+      <p class="text-[11px] uppercase tracking-[0.35em] text-[#767d88] mb-5">Studio</p>
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+        <h2 class="text-[40px] md:text-[48px] font-normal leading-[1.0] tracking-[-0.04em] text-white">
+          Our Studio
+        </h2>
+        <p class="text-[16px] text-[#767d88] max-w-[400px] leading-[1.55] md:text-right">
+          Studio 300 m² di Jakarta Selatan dengan natural light, blackout zone,
+          dan setup full equipment.
+        </p>
+      </div>
+    </div>
+
+    <!-- Main studio image -->
+    <div class="studio-image mb-3 overflow-hidden rounded-[6px]" style="opacity:0; transform:translateY(24px);">
+      <img
+        src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=1600&q=85&auto=format&fit=crop"
+        alt="Frame Studio interior — 300m² Jakarta Selatan"
+        loading="lazy"
+        decoding="async"
+        class="w-full h-[50vh] md:h-[65vh] object-cover"
+      />
+    </div>
+
+    <!-- Equipment row: 2 supporting images -->
+    <div class="grid grid-cols-2 gap-3 mb-3">
+      <div class="studio-image overflow-hidden rounded-[6px]" style="opacity:0; transform:translateY(20px);">
+        <img
+          src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=85&auto=format&fit=crop"
+          alt="Professional camera gear"
+          loading="lazy"
+          decoding="async"
+          class="w-full h-[28vh] md:h-[36vh] object-cover hover:scale-[1.03] transition-transform duration-700"
+        />
+      </div>
+      <div class="studio-image overflow-hidden rounded-[6px]" style="opacity:0; transform:translateY(20px);">
+        <img
+          src="https://images.unsplash.com/photo-1493863641943-9b68992a8d07?w=800&q=85&auto=format&fit=crop"
+          alt="Studio lighting setup"
+          loading="lazy"
+          decoding="async"
+          class="w-full h-[28vh] md:h-[36vh] object-cover hover:scale-[1.03] transition-transform duration-700"
+        />
+      </div>
+    </div>
+
+    <!-- Specs grid — divided by gap-px -->
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#27272a] rounded-[6px] overflow-hidden">
+      {specs.map((spec) => (
+        <div
+          class="spec-item bg-black p-8 md:p-10 flex flex-col gap-4"
+          style="opacity:0; transform:translateY(16px);"
+        >
+          <div class="flex items-start justify-between">
+            <p class="text-[11px] uppercase tracking-[0.35em] text-[#767d88]">{spec.label}</p>
+            <span class="text-[11px] text-[#404040] tabular-nums">{spec.id}</span>
+          </div>
+          <p class="text-white text-[20px] font-normal leading-[1.1] tracking-[-0.03em]">
+            {spec.value}
+          </p>
+          <p class="text-[14px] text-[#767d88] leading-[1.6]">{spec.detail}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  function revealOnScroll(selector: string, delayStep: number = 0) {
+    const elements = document.querySelectorAll<HTMLElement>(selector);
+    if (!elements.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target as HTMLElement;
+            el.style.transition = 'opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+            observer.unobserve(el);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '-60px' }
+    );
+
+    elements.forEach((el, i) => {
+      el.style.transitionDelay = `${i * delayStep}s`;
+      observer.observe(el);
+    });
+  }
+
+  // Header + images reveal
+  revealOnScroll('.studio-header', 0);
+  revealOnScroll('.studio-image', 0.08);
+
+  // Spec cards sequential reveal
+  revealOnScroll('.spec-item', 0.07);
+</script>
