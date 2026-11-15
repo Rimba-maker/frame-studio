@@ -15,7 +15,7 @@ const portfolioItems: PortfolioItem[] = [
   { id: 1, category: 'product', brand: 'Arum Watch Co.', type: 'Product Shot', year: '2024', image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=85&auto=format&fit=crop', aspect: 'aspect-[3/4]' },
   { id: 2, category: 'product', brand: 'Kicks Republic', type: 'E-Commerce', year: '2024', image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=85&auto=format&fit=crop', aspect: 'aspect-[4/3]' },
   { id: 3, category: 'product', brand: 'SoundWave Co.', type: 'Brand Campaign', year: '2023', image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&q=85&auto=format&fit=crop', aspect: 'aspect-square' },
-  { id: 4, category: 'product', brand: 'Reverie Skincare', type: 'Product Shot', year: '2024', image: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&q=85&auto=format&fit=crop', aspect: 'aspect-[3/4]' },
+  { id: 4, category: 'product', brand: 'Reverie Skincare', type: 'Product Shot', year: '2024', image: 'https://images.pexels.com/photos/29044029/pexels-photo-29044029.jpeg?auto=compress&cs=tinysrgb&w=800', aspect: 'aspect-[3/4]' },
   { id: 5, category: 'food', brand: 'Burger Bros', type: 'Menu Photography', year: '2024', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=85&auto=format&fit=crop', aspect: 'aspect-square' },
   { id: 6, category: 'food', brand: 'Nusantara Kitchen', type: 'Hero Shot', year: '2024', image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=85&auto=format&fit=crop', aspect: 'aspect-[4/3]' },
   { id: 7, category: 'food', brand: 'Sambal Pawon', type: 'Campaign Visual', year: '2023', image: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&q=85&auto=format&fit=crop', aspect: 'aspect-[3/4]' },
@@ -24,11 +24,11 @@ const portfolioItems: PortfolioItem[] = [
   { id: 10, category: 'fashion', brand: 'Archipelago Brand', type: 'Editorial', year: '2023', image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=85&auto=format&fit=crop', aspect: 'aspect-[3/4]' },
   { id: 11, category: 'beauty', brand: 'Sereh Beauty', type: 'Brand Launch', year: '2024', image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&q=85&auto=format&fit=crop', aspect: 'aspect-[3/4]' },
   { id: 12, category: 'beauty', brand: 'Glow Lab', type: 'Product Shot', year: '2023', image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=85&auto=format&fit=crop', aspect: 'aspect-square' },
-  { id: 13, category: 'beauty', brand: 'La Belle', type: 'Campaign', year: '2024', image: 'https://images.unsplash.com/photo-1487412947147-5cebf100d293?w=800&q=85&auto=format&fit=crop', aspect: 'aspect-[4/3]' },
+  { id: 13, category: 'beauty', brand: 'La Belle', type: 'Campaign', year: '2024', image: 'https://images.pexels.com/photos/7290715/pexels-photo-7290715.jpeg?auto=compress&cs=tinysrgb&w=800', aspect: 'aspect-[4/3]' },
   { id: 14, category: 'lifestyle', brand: 'Forma Living', type: 'Lifestyle Campaign', year: '2024', image: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?w=800&q=85&auto=format&fit=crop', aspect: 'aspect-[4/3]' },
-  { id: 15, category: 'lifestyle', brand: 'Nara Studio', type: 'Brand Content', year: '2024', image: 'https://images.unsplash.com/photo-1449247709967-d4461a6a6103?w=800&q=85&auto=format&fit=crop', aspect: 'aspect-[3/4]' },
+  { id: 15, category: 'lifestyle', brand: 'Nara Studio', type: 'Brand Content', year: '2024', image: 'https://images.pexels.com/photos/29460500/pexels-photo-29460500.jpeg?auto=compress&cs=tinysrgb&w=800', aspect: 'aspect-[3/4]' },
   { id: 16, category: 'lifestyle', brand: 'Kopi Nusantara', type: 'Lifestyle', year: '2023', image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=85&auto=format&fit=crop', aspect: 'aspect-square' },
-  { id: 17, category: 'video', brand: 'TechVerse Indonesia', type: 'Brand Film', year: '2024', image: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=85&auto=format&fit=crop', aspect: 'aspect-[4/3]' },
+  { id: 17, category: 'video', brand: 'TechVerse Indonesia', type: 'Brand Film', year: '2024', image: 'https://images.pexels.com/photos/13812415/pexels-photo-13812415.jpeg?auto=compress&cs=tinysrgb&w=800', aspect: 'aspect-[4/3]' },
   { id: 18, category: 'video', brand: 'Revolve Agency', type: 'Campaign Reel', year: '2024', image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=85&auto=format&fit=crop', aspect: 'aspect-[3/4]' },
 ];
 

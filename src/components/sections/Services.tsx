@@ -48,7 +48,7 @@ const services: Service[] = [
     title: 'Corporate & Branding',
     description: 'Office, team, headshot, brand documentation.',
     features: ['Annual report photography', 'LinkedIn-ready headshots', 'Behind-the-scene content'],
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=85&auto=format&fit=crop',
+    image: 'https://images.pexels.com/photos/36733322/pexels-photo-36733322.jpeg?auto=compress&cs=tinysrgb&w=600',
   },
   {
     id: 'video',
@@ -56,7 +56,7 @@ const services: Service[] = [
     title: 'Video Content',
     description: 'Reels, TikTok, brand film, product demo.',
     features: ['9:16, 1:1, 16:9 multi-format', 'Short-form social content', 'Brand documentary'],
-    image: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&q=85&auto=format&fit=crop',
+    image: 'https://images.pexels.com/photos/13812415/pexels-photo-13812415.jpeg?auto=compress&cs=tinysrgb&w=600',
   },
 ];
 

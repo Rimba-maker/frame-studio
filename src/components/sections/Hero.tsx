@@ -24,7 +24,7 @@ const imageBlock = {
 };
 
 const gridImages = [
-  { src: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&q=85&auto=format&fit=crop', alt: 'Skincare product photography', className: 'row-span-2' },
+  { src: 'https://images.pexels.com/photos/29044029/pexels-photo-29044029.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Skincare product photography', className: 'row-span-2' },
   { src: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=85&auto=format&fit=crop', alt: 'Sneaker product photography', className: '' },
   { src: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=85&auto=format&fit=crop', alt: 'Food photography', className: '' },
 ];
